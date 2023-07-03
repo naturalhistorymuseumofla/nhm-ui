@@ -1,0 +1,53 @@
+{
+  "name": "nhm-ui",
+  "version": "1.0.0",
+  "description": "A UI kit for NHMLAC",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "npm run watch:css && react-scripts start",
+    "build": "rollup -c --bundleConfigAsCjs && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "storybook": "npm run watch:css && storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "author": "Daniel Markbreiter",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/addon-styling": "^1.3.1",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/react": "^7.0.24",
+    "@storybook/react-webpack5": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.2.14",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.25.3",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "storybook": "^7.0.24",
+    "tailwindcss": "^3.3.2",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1"
+  }
+}
