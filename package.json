@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
-    "build": "rollup -c --bundleConfigAsCjs && react-scripts build",
+    "build": "rollup -c --bundleConfigAsCjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
