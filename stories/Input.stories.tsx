@@ -22,6 +22,7 @@ Default.args = {
   label: "Default",
   id: "default",
   placeholder: "Default",
+  type:"text"
 };
 
 export const Disabled: Story = (args) => (

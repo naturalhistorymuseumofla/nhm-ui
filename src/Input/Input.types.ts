@@ -5,5 +5,6 @@ export interface InputProps {
   placeholder?: string;
   id?: string;
   width?: "1/3" | "1/2" | "2/3" | "full";
+  type: "text" | "number" | "email" | "password";
  }
 

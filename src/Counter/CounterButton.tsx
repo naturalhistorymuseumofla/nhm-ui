@@ -11,7 +11,7 @@ const CounterButton: React.FC<CounterButtonProps> = ({ ...props }) => {
   return (
     <button
       onClick={props.onClick}
-      className={clsx("hover:bg-black hover:text-white bg-gray-200 w-8 transition-colors")}
+      className={clsx("hover:bg-gray-800 hover:text-white active:bg-black bg-gray-200 w-8 transition-colors")}
     >
       {props.variant === "inc" ? "+" : "-"}
     </button>

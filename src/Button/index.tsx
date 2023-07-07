@@ -3,6 +3,10 @@ import { ButtonProps } from "./Button.types";
 import clsx from "clsx";
 import "../tailwind.css";
 
+/**
+ * Primary UI component for user interaction
+ */
+
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   const variantClasses =
     props.variant === "nhm"
