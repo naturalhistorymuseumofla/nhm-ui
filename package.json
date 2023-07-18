@@ -1,5 +1,5 @@
 {
-  "version": "0.0.4",
+  "version": "0.0.5",
   "name": "nhm-ui",
   "author": "Daniel Markbreiter",
   "module": "dist/tdsx-example.esm.js",
