@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CounterProps } from './Counter.types';
 import clsx from 'clsx';
 import CounterButton from './CounterButton';
@@ -11,13 +11,22 @@ export const Counter: React.FC<CounterProps> = ({ ...props }) => {
   const [count, setCount] = useState(0);
   
   const increase = () => {
-    props.setTotal && props.setTotal(props.price);
-    setCount(count + 1)
+    setCount(count + 1);
   };
   const decrease = () => {
-    props.setTotal && props.setTotal(0 - props.price);
     setCount(count > 0 ? count - 1 : 0)
   };
+
+  const handleChange = (event:any) => {
+    const value = event.target.value;
+    if (value >= 0) {
+      setCount(value);
+    }
+  }
+
+  useEffect(() => {
+    props.setTotal && props.setTotal(count);
+  }, [count]);
 
   const increaseButton = <CounterButton variant="inc" onClick={increase} />;
   const decreaseButton = <CounterButton variant="dec" onClick={decrease} />;
@@ -25,13 +34,15 @@ export const Counter: React.FC<CounterProps> = ({ ...props }) => {
   return (
     <div className="flex gap-2">
       {props.direction === 'left' ? decreaseButton : increaseButton}
-      <div
+      <input
+        type="number"
+        value={count}
+        onChange={handleChange}
         className={clsx(
           'w-12 text-center py-3 border-black border-2 lining-nums'
         )}
       >
-        {count}
-      </div>
+      </input>
       {props.direction === 'left' ? increaseButton : decreaseButton}
     </div>
   );
