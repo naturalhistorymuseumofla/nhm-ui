@@ -1,8 +1,5 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
-import { H1, } from '../src/Text';
-import { TicketRow } from '../src/TicketRow';
 import { Cart } from '../src/Cart';
 
 

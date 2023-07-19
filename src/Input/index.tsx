@@ -20,7 +20,7 @@ export const Input: React.FC<InputProps> = ({ ...props }) => {
   return (
     <div className="flex flex-col w-full gap-1">
       <label
-        className={clsx("text-bold", requiredClasses, disabledClasses)}
+        className={clsx("font-bold text-sm", requiredClasses, disabledClasses)}
         htmlFor={props.id}
       >
         {props.label + (props.required ? " *" : "")}
@@ -32,7 +32,9 @@ export const Input: React.FC<InputProps> = ({ ...props }) => {
         disabled={props.disabled}
         placeholder={props.placeholder}
         className={clsx(
-          "border-2 border-black px-6 py-3 transition-colors font-bold lining-nums",
+          props.classes,
+          !props.disabled && "focus:border-black hover:border-black font-semibold",
+          "border-2 focus:outline-0 transition-colors border-gray-300 px-4 py-4 text-[#333333] lining-nums",
           disabledClasses,
           widthClasses
         )}

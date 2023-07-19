@@ -20,7 +20,7 @@ export const TicketRow: React.FC<TicketRowProps> = ({ ...props }) => {
   return (
     <div
       className={clsx(
-        'flex items-center gap-8 md:gap-4 lining-nums',
+        'flex items-center gap-6 lining-nums',
         props.direction === 'left' ? 'flex-row-reverse' : 'flex-row'
       )}
     >
@@ -30,7 +30,7 @@ export const TicketRow: React.FC<TicketRowProps> = ({ ...props }) => {
         setTotal={props.setTotal}
       />
       <H3 classes='w-16'>{'$' + props.price.toFixed(2)}</H3>
-      <div className="font-700">{props.group}</div>
+      <div className="w-10 font-700">{props.group}</div>
       <div>{props.description}</div>
     </div>
   );

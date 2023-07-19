@@ -1,16 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { TicketRow } from '../TicketRow';
-
-interface Group {
-  name: string;
-  price: number;
-  description: string;
-}
-
-interface CartProps {
-  groups: Group[];
-}
+import { Group, CartProps } from './Cart.types';
 
 export const Cart: React.FC<CartProps> = ({ ...props }) => {
   // Convert the array of objects into an object of nested objects
@@ -35,6 +26,7 @@ export const Cart: React.FC<CartProps> = ({ ...props }) => {
             group={group}
             key={i}
             description={cart[group].description}
+            // Sets the count of the group in the cart
             setTotal={(count: number) => {
               setCart({
                 ...cart,
@@ -47,10 +39,11 @@ export const Cart: React.FC<CartProps> = ({ ...props }) => {
       <div className="flex justify-start w-full text-3xl font-bold lining-nums">
         {'$ ' +
           Object.keys(cart)
+            // Get a sum of all prices multiplied by their count
             .reduce((sum, key) => {
-              console.log(cart);
               return sum + cart[key].count * cart[key].price;
             }, 0)
+            // Format the number to two decimal places
             .toLocaleString('en-US', {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
