@@ -1331,10 +1331,10 @@
   optionalDependencies:
     "msgpackr-extract" "^3.0.1"
 
-"nhm-ui@0.0.8":
-  "integrity" "sha512-L8ge4TmglVAplRNHFmWP3GIQcQ+93spjZvv2NfKhMUfme5q7w3fnG/pgFdPbR4JxmVAwRwwskes0ABaUFJWuDw=="
-  "resolved" "https://registry.npmjs.org/nhm-ui/-/nhm-ui-0.0.8.tgz"
-  "version" "0.0.8"
+"nhm-ui@^0.0.16":
+  "integrity" "sha512-5AV5tAOfhDNXUuE6SBRvVof4KW1mEBWibkLmXjoT/Q+HY6yzMk2VQP963YSZh+z1BROZwsQzHZojsWAr4GLNpQ=="
+  "resolved" "https://registry.npmjs.org/nhm-ui/-/nhm-ui-0.0.16.tgz"
+  "version" "0.0.16"
   dependencies:
     "@headlessui/react" "^1.7.15"
     "clsx" "^1.2.1"

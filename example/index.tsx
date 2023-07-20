@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Button, H1, Cart } from 'nhm-ui';
+import { Button, H1, Cart, Form, Input, InputGroup, Radio, RadioGroup } from 'nhm-ui';
 
 const App = () => {
   const groups: any =[
@@ -29,6 +29,16 @@ const App = () => {
   return (  
     <div style={{display:'flex', flexDirection:'column', gap:'1rem', margin:'2rem'}}>
       <H1>Example</H1>
+      <Form>
+        <RadioGroup label="Group:">
+          <Radio name="test" label="test" />
+          <Radio name="test" label="test" />
+        </RadioGroup>
+        <InputGroup classes="w-[50%]">
+          <Input label="test" name="test" />
+          <Input label="test" name="test" />
+        </InputGroup>
+      </Form>
       <Cart groups={groups}/>
       <Button>Submit</Button>
     </div>

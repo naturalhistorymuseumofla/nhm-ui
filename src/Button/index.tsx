@@ -10,9 +10,9 @@ import "../tailwind.css";
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   const variantClasses =
     props.variant === "nhm"
-      ? "outline-nhm text-nhm hover:bg-nhm hover:text-white"
+      ? "outline-nhm text-nhm hover:bg-nhm hover:text-white bg-white"
       : props.variant === "lbtp"
-      ? "outline-lbtp text-lbtp hover:bg-lbtp hover:text-white"
+      ? "outline-lbtp text-lbtp hover:bg-lbtp hover:text-white bg-white"
       : props.variant === "default"
       ? "outline-black text-black hover:bg-black hover:text-white"
       : "outline-black text-outline-black hover:bg-black hover:text-white";
@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   return (
     <button
       className={clsx(
-        "outline-2 outline px-6 py-3 transition-colors font-bold !preflight w-fit bg-white",
+        "outline-2 outline px-6 py-3 transition-colors font-bold w-fit",
         variantClasses,
         disabledClasses,
         props.classes

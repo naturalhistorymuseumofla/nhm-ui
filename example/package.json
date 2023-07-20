@@ -8,7 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "nhm-ui": "0.0.8",
+    "nhm-ui": "^0.0.16",
     "react-app-polyfill": "^1.0.0",
     "tdsx-example": "^0.1.3"
   },
