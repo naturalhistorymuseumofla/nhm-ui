@@ -1,5 +1,5 @@
 {
-  "version": "0.0.15",
+  "version": "0.0.16",
   "name": "nhm-ui",
   "author": "Daniel Markbreiter",
   "module": "dist/nhm-ui.esm.js",
