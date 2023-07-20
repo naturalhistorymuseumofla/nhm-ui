@@ -23,7 +23,7 @@ export const Selector: React.FC<SelectorProps> = ({ ...props }) => {
       name={props.name}
       className={clsx(
         `w-8 h-8 text-black border-2 border-gray-300 checked:border-black 
-         flex items-center justify-center`,
+         flex items-center justify-center hover:border-black transition-colors`,
         beforeStyles,
         props.classes
       )}

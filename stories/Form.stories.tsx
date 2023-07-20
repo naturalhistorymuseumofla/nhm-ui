@@ -22,9 +22,9 @@ type Story = StoryObj<typeof Form>;
 export const Default: Story = (args) => (
   <Form data-testId="RadioField-id" {...args}>
     <InputGroup>
-      <Input type="text" width="1/2" label="First Name" name="firstName" />
+      <Input type="text" width="1/2" label="First Name" name="firstName"/>
       <Input type="text" width="1/2" label="Last Name" name="lastName" />
-      <Input type="password" width="1/3" label="Password" name="password" />
+      <Input type="password" width="1/3" label="Password" name="password" caption="Passwords should be at least 14 characters long"/>
       <Input type="email" width="2/3" label="Email" name="email" />
       <TextArea label="Text Area" name="textArea" width="1/2" />
     </InputGroup>

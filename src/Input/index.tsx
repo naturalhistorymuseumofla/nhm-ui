@@ -40,6 +40,7 @@ export const Input: React.FC<InputProps> = ({ ...props }) => {
           disabledClasses
         )}
       />
+      <span className="ml-1 text-sm">{props.caption}</span>
     </div>
   );
 };

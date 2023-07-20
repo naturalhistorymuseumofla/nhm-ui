@@ -6,6 +6,7 @@ export interface InputProps {
   name: string;
   width?: "1/3" | "1/2" | "2/3" | "full";
   type: "text" | "number" | "email" | "password";
+  caption?: string;
   classes?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
  }
