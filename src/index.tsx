@@ -1,5 +1,6 @@
 export * from './Button';
 export * from './Input';
+import * from './InputGroup';
 export * from './Counter';
 export * from './Text';
 export * from './TicketRow';

@@ -2,6 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-Regular.woff);
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-Italic.woff);
+  font-weight: 400; 
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-Book.woff);
+  font-weight: 500; 
+  font-style:normal;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-BookItalic.woff);
+  font-weight: 500; 
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-Medium.woff);
+  font-weight: 600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-MediumItalic.woff);
+  font-weight: 600; 
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-Bold.woff);
+  font-weight: 700; 
+  font-style:normal;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-BoldItalic.woff);
+  font-weight: 700; 
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-ExtraBold.woff);
+  font-weight: 800; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-ExtraBoldItalic.woff);
+  font-weight: 800; 
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-Black.woff);
+  font-weight: 900; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kievit';
+  src: url(https://nhm-fonts.sfo3.cdn.digitaloceanspaces.com/fonts/kievit/KievitOT-BlackItalic.woff);
+  font-weight: 900; 
+  font-style: italic;
+}
+
 html { 
   font-size: clamp(0.6rem, 0.65vw + 0.65rem, 0.9rem);
 

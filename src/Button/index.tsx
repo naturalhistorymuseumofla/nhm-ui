@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   return (
     <button
       className={clsx(
-        "outline-2 outline px-6 py-3 transition-colors font-bold !preflight w-fit",
+        "outline-2 outline px-6 py-3 transition-colors font-bold !preflight w-fit bg-white",
         variantClasses,
         disabledClasses,
         props.classes

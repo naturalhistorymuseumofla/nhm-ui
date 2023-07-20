@@ -36,7 +36,7 @@ export const Input: React.FC<InputProps> = ({ ...props }) => {
         className={clsx(
           props.classes,
           !props.disabled && "focus:border-black hover:border-black font-semibold",
-          "border-2 focus:outline-0 transition-colors border-gray-300 px-4 py-4 text-[#333333] lining-nums",
+          "border-2  bg-white focus:outline-0 transition-colors border-gray-300 px-4 py-4 text-[#333333] lining-nums",
           disabledClasses
         )}
       />
