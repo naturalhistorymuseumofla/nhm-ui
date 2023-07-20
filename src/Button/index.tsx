@@ -24,7 +24,8 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
       className={clsx(
         "outline-2 outline px-6 py-3 transition-colors font-bold !preflight w-fit",
         variantClasses,
-        disabledClasses
+        disabledClasses,
+        props.classes
       )}
       onClick={props.onClick}
     >

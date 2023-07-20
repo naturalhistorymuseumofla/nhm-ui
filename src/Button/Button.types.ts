@@ -5,4 +5,5 @@ export interface ButtonProps {
   variant?: "nhm" | "lbtp" | "default";
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  classes?: string;
 }

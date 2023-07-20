@@ -27,7 +27,7 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
   return (
     <form
       className={clsx(
-        'flex flex-col gap-4 w-full',
+        'flex flex-col gap-6 w-full',
       )}
       onSubmit={props.onSubmit ? props.onSubmit : onSubmit}
       action={props.action}
@@ -40,7 +40,7 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
           onChange: onChange,
         });
       })}
-      <Button>
+      <Button classes='mt-4'>
         <input type="submit" className="w-fit"/>
       </Button>
 

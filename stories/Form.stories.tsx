@@ -5,6 +5,8 @@ import { RadioGroup } from "../src/RadioGroup";
 import { Radio } from "../src/Radio";
 import { Input } from "../src/Input";
 import { InputGroup } from "../src/InputGroup";
+import { Checkbox } from "../src/Checkbox";
+import { CheckboxGroup } from "../src/CheckboxGroup";
 
 const meta: Meta<typeof Form> = {
   component: Form,
@@ -29,8 +31,11 @@ export const Default: Story = (args) => (
       <Radio label="Radio 2" name="example" />
       <Radio label="Radio 3" name="example" />
     </RadioGroup>
-
-  
+    <CheckboxGroup title="Checkbox Group:">
+      <Checkbox label="Option 1" name="1" />
+      <Checkbox label="Option 2" name="2" />
+      <Checkbox label="Option 3" name="3" />
+    </CheckboxGroup>
   </Form>
 );
 

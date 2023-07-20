@@ -4,3 +4,8 @@ export * from './Counter';
 export * from './Text';
 export * from './TicketRow';
 export * from './Cart';
+export * from './Checkbox';
+export * from './CheckboxGroup';
+export * from './Radio';
+export * from './RadioGroup';
+export * from './Form';

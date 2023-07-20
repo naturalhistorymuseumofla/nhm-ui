@@ -1,26 +1,36 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Button, H1 } from 'nhm-ui';
-import { useState } from 'react';
-import { Form } from '../src/Form';
-import { RadioGroup } from '../src/RadioGroup';
-import { Radio } from '../src/Radio';
-
+import { Button, H1, Cart } from 'nhm-ui';
 
 const App = () => {
-  const [isToggled, setIsToggled] = useState(false);
-  return (
-    <div>
+  const groups: any =[
+    {
+      description: 'Ages 13+',
+      name: 'Adult',
+      price: 10
+    },
+    {
+      description: 'Ages 65+',
+      name: 'Senior',
+      price: 7
+    },
+    {
+      description: 'Ages 3-12',
+      name: 'Child',
+      price: 5
+    },
+    {
+      description: 'Ages 0-2',
+      name: 'Infant',
+      price: 0
+    }
+  ];
+  return (  
+    <div style={{display:'flex', flexDirection:'column', gap:'1rem', margin:'2rem'}}>
       <H1>Example</H1>
+      <Cart groups={groups}/>
       <Button>Submit</Button>
-      <Form>
-        <RadioGroup title="Radio Group:">
-          <Radio label="Radio 1" name="example" />
-          <Radio label="Radio 2" name="example" />
-          <Radio label="Radio 3" name="example" />
-        </RadioGroup>
-      </Form>
     </div>
   );
 };
