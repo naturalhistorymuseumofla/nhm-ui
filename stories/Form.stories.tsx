@@ -7,6 +7,7 @@ import { Input } from "../src/Input";
 import { InputGroup } from "../src/InputGroup";
 import { Checkbox } from "../src/Checkbox";
 import { CheckboxGroup } from "../src/CheckboxGroup";
+import { TextArea } from "../src/TextArea";
 
 const meta: Meta<typeof Form> = {
   component: Form,
@@ -25,6 +26,7 @@ export const Default: Story = (args) => (
       <Input type="text" width="1/2" label="Last Name" name="lastName" />
       <Input type="password" width="1/3" label="Password" name="password" />
       <Input type="email" width="2/3" label="Email" name="email" />
+      <TextArea label="Text Area" name="textArea" width="1/2" />
     </InputGroup>
     <RadioGroup title="Radio Group:">
       <Radio label="Radio 1" name="example" />
