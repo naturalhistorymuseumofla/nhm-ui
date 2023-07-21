@@ -1,5 +1,5 @@
 {
-  "version": "0.0.19",
+  "version": "0.0.20",
   "name": "nhm-ui",
   "author": "Daniel Markbreiter",
   "module": "dist/nhm-ui.esm.js",
@@ -27,6 +27,10 @@
     "build-storybook": "storybook build",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -o storybook-static"
+  },
+  "exports": {
+    ".": "./dist/index.d.ts",
+    "./Forms": "./dist/Forms/index.d.ts"
   },
   "peerDependencies": {
     "react": ">=16"
