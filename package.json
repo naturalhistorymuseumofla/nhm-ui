@@ -28,10 +28,6 @@
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -o storybook-static"
   },
-  "exports": {
-    ".": "./dist/index.d.ts",
-    "./Forms": "./dist/Forms/index.d.ts"
-  },
   "peerDependencies": {
     "react": ">=16"
   },

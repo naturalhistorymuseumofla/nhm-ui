@@ -10,3 +10,4 @@ export * from './CheckboxGroup';
 export * from './Radio';
 export * from './RadioGroup';
 export * from './Form';
+export * from './Select';
