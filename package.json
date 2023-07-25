@@ -86,6 +86,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "clsx": "^1.2.1",
+    "istanbul-lib-coverage": "^3.2.0",
     "stylus": "^0.59.0"
   }
 }
