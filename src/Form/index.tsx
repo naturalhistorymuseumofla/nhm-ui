@@ -1,11 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '../Button';
 
 interface FormProps {
   children: React.ReactNode[];
-  onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
+  onSubmit: (formData: any) => void;
   action?: string;
   method?: string;
 }
@@ -16,20 +16,14 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
   const onChange = (event: any) => {
     const { name, value } = event.target;
     setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
-    console.log(formData);
   };
-
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    return false;
-  }
 
   return (
     <form
       className={clsx(
         'flex flex-col gap-6 w-full',
       )}
-      onSubmit={props.onSubmit ? props.onSubmit : onSubmit}
+      onSubmit={() => props.onSubmit(formData)}
       action={props.action}
       method={props.method}
     >
@@ -40,6 +34,7 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
           onChange: onChange,
         });
       })}
+      
       <Button classes='mt-4'>
         <input type="submit" className="w-fit"/>
       </Button>

@@ -17,6 +17,7 @@ export const Default: Story = (args) => (
 );
 
 Default.args = {
+  name: 'Select',
   options: [
     { name: 'Durward Reynolds', unavailable: false },
     { name: 'Kenton Towne', unavailable: false },

@@ -11,10 +11,11 @@ interface Option {
 interface SelectProps {
   options: Option[];
   defaultValue?: string;
-  onSelect?: () => void;
+  onChange?: (event: any) => void;
+  name: string;
 }
 
-export const Select = ({ options, defaultValue, onSelect }: SelectProps) => {
+export const Select = ({ options, defaultValue, ...props }: SelectProps) => {
   const [selectedOption, setSelectedOption] = useState(
     defaultValue ? {name: defaultValue}: options[0]
   );
@@ -33,9 +34,13 @@ export const Select = ({ options, defaultValue, onSelect }: SelectProps) => {
     );
 
   const onChange = (value: string) => {
-    console.log(value)
     value && setSelectedOption({ name: value });
-    onSelect && onSelect();
+    props.onChange && props.onChange({
+      target: { 
+        name: props.name, 
+        value: value
+      }
+    });
   };
 
   return (
@@ -55,7 +60,7 @@ export const Select = ({ options, defaultValue, onSelect }: SelectProps) => {
                   disabled={option.unavailable}
                 >
                   {({ active, selected }) => (
-                    <li
+                    <div
                       className={clsx(
                         `px-4 py-3`,
                         option.unavailable
@@ -66,7 +71,7 @@ export const Select = ({ options, defaultValue, onSelect }: SelectProps) => {
                       )}
                     >
                       {option.name}
-                    </li>
+                    </div>
                   )}
                 </Listbox.Option>
               ))}
