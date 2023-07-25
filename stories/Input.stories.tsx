@@ -20,7 +20,6 @@ Default.args = {
   disabled: false,
   required: false,
   label: "Default",
-  id: "default",
   placeholder: "Default",
   type:"text"
 };
@@ -33,7 +32,6 @@ Disabled.args = {
   disabled: true,
   required: false,
   label: "Disabled",
-  id: "disabled",
   placeholder: "Disabled",
 };
 
@@ -44,6 +42,5 @@ Required.args = {
   disabled: false,
   required: true,
   label: "Required",
-  id: "required",
   placeholder: "Required",
 };

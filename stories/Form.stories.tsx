@@ -8,6 +8,7 @@ import { InputGroup } from "../src/InputGroup";
 import { Checkbox } from "../src/Checkbox";
 import { CheckboxGroup } from "../src/CheckboxGroup";
 import { TextArea } from "../src/TextArea";
+import { Select } from "../src/Select";
 
 const meta: Meta<typeof Form> = {
   component: Form,
@@ -38,6 +39,11 @@ export const Default: Story = (args) => (
       <Checkbox label="Option 2" name="2" />
       <Checkbox label="Option 3" name="3" />
     </CheckboxGroup>
+    <Select defaultValue="Select" options={[
+    { name: 'Durward Reynolds', unavailable: false },
+    { name: 'Kenton Towne', unavailable: false },
+    { name: 'Therese Wunsch', unavailable: false },
+    ]}/>
   </Form>
 );
 
