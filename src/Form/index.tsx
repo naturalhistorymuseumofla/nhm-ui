@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '../Button';
 
 interface FormProps {
