@@ -9,6 +9,7 @@ import { Checkbox } from "../src/Checkbox";
 import { CheckboxGroup } from "../src/CheckboxGroup";
 import { TextArea } from "../src/TextArea";
 import { Select } from "../src/Select";
+import { Button } from "../src/Button";
 
 const meta: Meta<typeof Form> = {
   component: Form,
@@ -48,5 +49,9 @@ export const Default: Story = (args) => (
 );
 
 Default.args = {
-  onSubmit: (formData: any) => {console.log(formData)}
+  onSubmit: (e, formData: any) => {
+    e.preventDefault();
+    console.log(formData)
+  },
+  useDefaultButton: true,
 };

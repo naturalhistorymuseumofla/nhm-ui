@@ -5,9 +5,11 @@ import { Button } from '../Button';
 
 interface FormProps {
   children: React.ReactNode[];
-  onSubmit: (formData: any) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>, formData: any) => void;
   action?: string;
   method?: string;
+  useDefaultButton?: boolean;
+  classes?: string;
 }
 
 export const Form: React.FC<FormProps> = ({ ...props }) => {
@@ -22,8 +24,9 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
     <form
       className={clsx(
         'flex flex-col gap-6 w-full',
+        props.classes
       )}
-      onSubmit={() => props.onSubmit(formData)}
+      onSubmit={(e) => props.onSubmit(e, formData)}
       action={props.action}
       method={props.method}
     >
@@ -35,9 +38,9 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
         });
       })}
       
-      <Button classes='mt-4'>
+      { props.useDefaultButton && <Button classes='mt-4'>
         <input type="submit" className="w-fit"/>
-      </Button>
+      </Button>}
 
     </form>
   );
