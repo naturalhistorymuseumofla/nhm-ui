@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Counter } from "../src/Counter/index";
+import { Counter } from "../src/components/Counter/index";
 import { useState } from "react";
 
 const meta: Meta<typeof Counter> = {

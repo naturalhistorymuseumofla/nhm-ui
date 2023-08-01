@@ -1,11 +1,18 @@
 import React from "react";
-import { ButtonProps } from "./Button.types";
+import { MouseEventHandler } from "react";
 import clsx from "clsx";
-import "../tailwind.css";
 
 /**
  * Primary UI component for user interaction
  */
+
+export interface ButtonProps {
+  children?: string | React.ReactNode;
+  variant?: "nhm" | "lbtp" | "default" | "destructive";
+  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  classes?: string;
+}
 
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   const variantClasses =
@@ -18,7 +25,6 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
       : props.variant === "destructive" 
       ? "bg-red-600 outline-red-600 hover:outline-red-700 hover:bg-red-700 text-white"
       : "outline-black text-outline-black hover:bg-black hover:text-white";
-
 
   const disabledClasses = props.disabled ? "opacity-50 cursor-not-allowed" : "";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { useState } from 'react';
-import { Button } from '../Button';
+import { SubmitButton } from './SubmitButton';
 
 interface FormProps {
   children: React.ReactNode[];
@@ -10,6 +10,7 @@ interface FormProps {
   method?: string;
   useDefaultButton?: boolean;
   classes?: string;
+  id?: string;
 }
 
 export const Form: React.FC<FormProps> = ({ ...props }) => {
@@ -29,6 +30,7 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
       onSubmit={(e) => props.onSubmit(e, formData)}
       action={props.action}
       method={props.method}
+      id={props.id}
     >
       {React.Children.map(props.children, (child: any, i: number) => {
         return React.cloneElement(child, {
@@ -38,9 +40,7 @@ export const Form: React.FC<FormProps> = ({ ...props }) => {
         });
       })}
       
-      { props.useDefaultButton && <Button classes='mt-4'>
-        <input type="submit" className="w-fit"/>
-      </Button>}
+      { props.useDefaultButton && <SubmitButton />}
 
     </form>
   );

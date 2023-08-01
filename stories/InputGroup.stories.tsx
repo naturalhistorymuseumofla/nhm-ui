@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { InputGroup } from "../src/InputGroup";
-import { Input } from "../src/Input";
+import { InputGroup } from "../src/components/InputGroup";
+import { Input } from "../src/components/Input";
 
 const meta: Meta<typeof InputGroup> = {
   component: InputGroup,

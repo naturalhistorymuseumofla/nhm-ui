@@ -1,15 +1,14 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { Form } from "../src/Form";
-import { RadioGroup } from "../src/RadioGroup";
-import { Radio } from "../src/Radio";
-import { Input } from "../src/Input";
-import { InputGroup } from "../src/InputGroup";
-import { Checkbox } from "../src/Checkbox";
-import { CheckboxGroup } from "../src/CheckboxGroup";
-import { TextArea } from "../src/TextArea";
-import { Select } from "../src/Select";
-import { Button } from "../src/Button";
+import { Form } from "../src/components/Form";
+import { RadioGroup } from "../src/components/RadioGroup";
+import { Radio } from "../src/components/Radio";
+import { Input } from "../src/components/Input";
+import { InputGroup } from "../src/components/InputGroup";
+import { Checkbox } from "../src/components/Checkbox";
+import { CheckboxGroup } from "../src/components/CheckboxGroup";
+import { TextArea } from "../src/components/TextArea";
+import { Select } from "../src/components/Select";
 
 const meta: Meta<typeof Form> = {
   component: Form,

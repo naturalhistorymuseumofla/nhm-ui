@@ -1,7 +1,6 @@
 import React from "react";
 import { InputProps } from "./Input.types";
 import clsx from "clsx";
-import "../tailwind.css";
 
 export const Input: React.FC<InputProps> = ({ ...props }) => {
   const requiredClasses = props.required ? "text-red-600" : "";
@@ -16,6 +15,7 @@ export const Input: React.FC<InputProps> = ({ ...props }) => {
       : props.width === "2/3"
       ? "w-full sm:basis-[calc(66.7%-.33rem)]"
       : "w-full";
+    
 
   return (
     <div className={clsx("flex flex-col gap-1", widthClasses)}>

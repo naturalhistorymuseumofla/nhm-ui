@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Selector } from '../Selector';
+import { Selector } from './Selector';
 
 interface RadioProps {
   label: string;

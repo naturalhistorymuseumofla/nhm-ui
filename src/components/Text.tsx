@@ -1,7 +1,10 @@
 import React from "react";
-import { TextProps } from "./Text.types";
 import clsx from "clsx";
-import "../tailwind.css";
+
+export interface TextProps {
+  children?: string;
+  classes?: string;
+ }
 
 const H1: React.FC<TextProps> = ({ children, ...props }) => {
   return (

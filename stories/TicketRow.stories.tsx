@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { TicketRow } from "../src/TicketRow/index";
+import { TicketRow } from "../src/components/TicketRow";
 
 const meta: Meta<typeof TicketRow> = {
   component: TicketRow,

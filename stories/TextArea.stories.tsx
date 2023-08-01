@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { TextArea } from "../src/TextArea";
+import { TextArea } from "../src/components/TextArea";
 
 const meta: Meta<typeof TextArea> = {
   component: TextArea,

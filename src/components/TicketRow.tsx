@@ -1,8 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import '../tailwind.css';
-import { Counter } from '../Counter';
-import { H3 } from '../Text';
+import { Counter } from './Counter';
+import { H3 } from './Text';
 
 /**
  * Ticket option row for ticketing shopping cart.

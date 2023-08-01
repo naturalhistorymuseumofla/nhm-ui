@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { H1, H2, H3, H4, Paragraph } from "../src/Text/index";
+import { H1, H2, H3, H4, Paragraph } from "../src/components/Text";
 
 const meta: Meta<typeof H1> = {
   component: H1,
