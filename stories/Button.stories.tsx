@@ -38,5 +38,13 @@ LBTP.args = {
   variant: "lbtp",
 };
 
+export const Destructive: Story = (args) => (
+  <Button data-testId="InputField-id" {...args} />
+);
+Destructive.args = {
+  disabled: false,
+  children: "Destructive",
+  variant: "destructive",
+};
 
 
