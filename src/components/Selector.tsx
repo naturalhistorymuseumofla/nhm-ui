@@ -21,6 +21,8 @@ export const Selector: React.FC<SelectorProps> = ({ ...props }) => {
       type={props.type}
       value={props.label}
       name={props.name}
+      tabIndex={0}
+      aria-checked="false"
       className={clsx(
         `w-8 h-8 text-black border-2 border-gray-300 checked:border-black 
          flex items-center justify-center hover:border-black transition-colors`,

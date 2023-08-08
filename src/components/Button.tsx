@@ -37,6 +37,8 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
         props.classes
       )}
       onClick={props.onClick}
+      tabIndex={0}
+      role="button"
     >
       {children}
     </button>
