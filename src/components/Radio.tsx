@@ -14,6 +14,7 @@ export const Radio: React.FC<RadioProps> = ({ ...props }) => {
   return (
     <Selector 
       type="radio"
+      role="radio"
       label={props.label}
       name={props.name}
       classes={classes}

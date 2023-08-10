@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { CounterProps } from './Counter.types';
 import clsx from 'clsx';
 import CounterButton from './CounterButton';
+import { MouseEventHandler } from "react";
 
 /**
  * UI component for increasing and decreasing a number (quantity selector) — used primarily for ticketing shopping cart.
  */
+
+interface CounterProps {
+  direction: "left" | "right";
+  setTotal?: Function;
+  price: number;
+  onIncrease?: MouseEventHandler<HTMLButtonElement>;
+  onDecrease?: MouseEventHandler<HTMLButtonElement>;
+}
 
 export const Counter: React.FC<CounterProps> = ({ ...props }) => {
   const [count, setCount] = useState(0);
@@ -38,6 +46,7 @@ export const Counter: React.FC<CounterProps> = ({ ...props }) => {
         type="number"
         value={count}
         onChange={handleChange}
+        aria-valuenow={count}
         className={clsx(
           'w-12 text-center py-3 border-black border-2 lining-nums'
         )}

@@ -18,6 +18,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({ ...props }) => {
     <Selector
       type="checkbox"
       label={props.label}
+      role="checkbox"
       name={props.name}
       classes={classes}
     />

@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
   return (
     <button
       className={clsx(
-        "outline-2 outline px-6 py-3 transition-colors font-bold w-fit",
+        "outline-2 outline px-6 py-3 transition-colors font-bold w-fit focus:bg-slate-300",
         variantClasses,
         disabledClasses,
         props.classes
@@ -39,6 +39,7 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
       onClick={props.onClick}
       tabIndex={0}
       role="button"
+      aria-disabled={props.disabled}
     >
       {children}
     </button>

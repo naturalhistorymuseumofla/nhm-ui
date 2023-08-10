@@ -8,9 +8,14 @@ interface RadioGroupProps {
 
 export const RadioGroup: React.FC<RadioGroupProps> = ({ ...props }) => {
   return (
-
-    <div className="flex flex-col gap-2" onChange={props.onChange}>
-      <div className='font-bold'>{props.title}</div>
+    <div
+      className="flex flex-col gap-2"
+      onChange={props.onChange}
+      role="radiogroup"
+      id={props.title}
+      aria-labelledby={props.title}
+    >
+      <div className="font-bold">{props.title}</div>
       {props.children}
     </div>
   );

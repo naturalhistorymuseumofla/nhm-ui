@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface CheckboxGroupProps {
   title: string;
@@ -8,9 +8,15 @@ interface CheckboxGroupProps {
 
 export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ ...props }) => {
   return (
-    <div className="flex flex-col gap-2" onChange={props.onChange}>
+    <div
+      id={props.title}
+      aria-labelledby={props.title}
+      className="flex flex-col gap-2"
+      onChange={props.onChange}
+      role="group"
+    >
       <div className="font-bold">{props.title}</div>
       {props.children}
     </div>
   );
-}
+};

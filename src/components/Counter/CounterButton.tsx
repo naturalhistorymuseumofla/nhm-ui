@@ -1,19 +1,23 @@
-import React from "react";
-import clsx from "clsx";
-import { MouseEventHandler } from "react";
+import React from 'react';
+import clsx from 'clsx';
+import { MouseEventHandler } from 'react';
 
 interface CounterButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
-  variant: "inc" | "dec";
+  variant: 'inc' | 'dec';
 }
 
 const CounterButton: React.FC<CounterButtonProps> = ({ ...props }) => {
   return (
     <button
       onClick={props.onClick}
-      className={clsx("hover:bg-gray-800 hover:text-white active:bg-black bg-gray-200 w-8 transition-colors")}
+      role="button"
+      aria-label={props.variant === 'inc' ? 'increase' : 'decrease'}
+      className={clsx(
+        'hover:bg-gray-800 hover:text-white active:bg-black bg-gray-200 w-8 transition-colors'
+      )}
     >
-      {props.variant === "inc" ? "+" : "-"}
+      {props.variant === 'inc' ? '+' : '-'}
     </button>
   );
 };

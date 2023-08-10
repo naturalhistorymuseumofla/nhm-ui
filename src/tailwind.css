@@ -123,3 +123,15 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked::before {
   content: "\2713";
 }
+
+.focus {
+  outline: solid 4px red;
+}
+
+.absolute-center {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
