@@ -15,9 +15,9 @@ module.exports = {
         '102': '1.02',
       },
       textShadow: {
-        sm: '0 0px 3px #000010',
-        DEFAULT: '0 0px 4px #000020',
-        lg: '0 0px 5px #000030',
+        sm: '0 0px 10px rgba(0,0,0,0.10)',
+        DEFAULT: '0 0px 10px rgba(0,0,0,0.3)',
+        lg: '0 0px 10px rgba(0,0,0,0.5)',
       },
       fontFamily: {
         sans: ['Kievit', 'KievitOT'],

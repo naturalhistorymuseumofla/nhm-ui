@@ -8,13 +8,13 @@ export interface TextProps {
 
 const H1: React.FC<TextProps> = ({ children, ...props }) => {
   return (
-    <h1 className={clsx("text-6xl font-black mb-4", props.classes)}>{children}</h1>
+    <h1 className={clsx("text-7xl font-black mb-4", props.classes)}>{children}</h1>
   )
 }
 
 const H2: React.FC<TextProps> = ({ children, ...props }) => {
   return (
-    <h2 className={clsx("text-4xl font-black mb-2", props.classes)}>{children}</h2>
+    <h2 className={clsx("text-5xl font-black mb-2", props.classes)}>{children}</h2>
   );
 }
 
