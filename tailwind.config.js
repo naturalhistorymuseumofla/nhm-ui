@@ -1,4 +1,4 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,7 +9,16 @@ module.exports = {
     extend: {
       colors: {
         nhm: '#52840E',
-        lbtp: '#D14900'
+        lbtp: '#D14900',
+        // mapped from legacy Sass variables for internal consistency
+        gray: {
+          100: '#efefef', // $c-grey-x-light
+          200: '#e1e1e1', // $c-grey-light
+          400: '#868686', // $c-grey-med
+          500: '#6b6b6b', // $c-grey-med-text
+          600: '#696969', // $c-grey-med-label / $c-grey-696969
+          900: '#333333', // $c-grey-dark
+        },
       },
       scale: {
         '102': '1.02',
@@ -25,19 +34,18 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(function({ matchUtilities, theme }) {
       matchUtilities(
         {
-          'text-shadow': (value) => ({
+          'text-shadow': value => ({
             textShadow: value,
           }),
         },
         { values: theme('textShadow') }
-      )
+      );
     }),
   ],
   corePlugins: {
     preflight: true,
   },
-}
-
+};
