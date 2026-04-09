@@ -28,3 +28,18 @@ module.exports = {
     autodocs: true
   }
 };
+
+const path = require('path');
+
+// Add webpack aliases to match tsconfig and components.json aliases
+module.exports.webpackFinal = async (config) => {
+  config.resolve = config.resolve || {};
+  config.resolve.alias = Object.assign({}, config.resolve.alias, {
+    '@': path.resolve(__dirname, '../src'),
+    'lib': path.resolve(__dirname, '../src/lib'),
+    'ui': path.resolve(__dirname, '../src/components/ui'),
+    'components': path.resolve(__dirname, '../src/components'),
+    'hooks': path.resolve(__dirname, '../src/hooks'),
+  });
+  return config;
+};
