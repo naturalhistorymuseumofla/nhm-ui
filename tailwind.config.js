@@ -3,8 +3,11 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './stories/*'],
-  content: [],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './stories/**/*.{js,jsx,ts,tsx}',
+    './example/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
